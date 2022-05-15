@@ -2,6 +2,7 @@ html {
     background-color: #333;
     font-size: 22px;
     color: aliceblue;
+    scroll-behavior: smooth;
 }
 
 body {
