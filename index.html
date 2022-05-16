@@ -39,32 +39,31 @@
     </header>
     <hr />
     <main>
-      <section>
-        <article>
-          <p>
-            Pierogi – ogólnie: kawałki cienkiego, elastycznego i dobrze
-            zlepiającego się ciasta napełnione najrozmaitszymi farszami i
-            ugotowane w wodzie lub na parze, upieczone, usmażone czy grillowane;
-            ciasto może zostać zrobione z dowolnego rodzaju mąki (pszennej,
-            ryżowej, kukurydzianej, żytniej, gryczanej) z dodatkiem wody, jaj,
-            drożdży i tłuszczu (masła, oleju, smalcu), śmietany oraz innych
-            dodatków smakowo-zapachowo-barwiących; przy czym ciasto powinno być
-            dostosowane do farszu;
-          </p>
-          <aside>
-            <h3>Pierogies trivia</h3>
-            <details>
-              <summary>When did pierogies first appear?</summary>
-              <p>
-                Legend has it that the 13th-century saint Jacek Odrowąż
-                introduced pierogi to the nation when he fed dumplings to the
-                poor in Kraków following the Tatar invasion. Since then, he is
-                sometimes known as 'Saint Jacek with pierogi'.
-              </p>
-            </details>
-          </aside>
-        </article>
-      </section>
+      <article>
+        <p>
+          Pierogi – ogólnie: kawałki cienkiego, elastycznego i dobrze
+          zlepiającego się ciasta napełnione najrozmaitszymi farszami i
+          ugotowane w wodzie lub na parze, upieczone, usmażone czy grillowane;
+          ciasto może zostać zrobione z dowolnego rodzaju mąki (pszennej,
+          ryżowej, kukurydzianej, żytniej, gryczanej) z dodatkiem wody, jaj,
+          drożdży i tłuszczu (masła, oleju, smalcu), śmietany oraz innych
+          dodatków smakowo-zapachowo-barwiących; przy czym ciasto powinno być
+          dostosowane do farszu;
+        </p>
+        <aside>
+          <h3>Pierogies trivia</h3>
+          <details>
+            <summary>When did pierogies first appear?</summary>
+            <p>
+              Legend has it that the 13th-century saint Jacek Odrowąż introduced
+              pierogi to the nation when he fed dumplings to the poor in Kraków
+              following the Tatar invasion. Since then, he is sometimes known as
+              'Saint Jacek with pierogi'.
+            </p>
+          </details>
+        </aside>
+      </article>
+
       <hr />
       <section id="menu">
         <h1>Our menu:</h1>
@@ -83,7 +82,9 @@
             <tr>
               <td>Boiled</td>
               <td rowspan="2">Ruskie</td>
-              <td rowspan="2">22zł/kg</td>
+              <td rowspan="2">
+                <abbr title="How many zlotys for 1 kg">22zł/kg</abbr>
+              </td>
             </tr>
             <tr>
               <td>Fried</td>
@@ -91,7 +92,9 @@
             <tr>
               <td>Boiled</td>
               <td rowspan="2">Z mięsem</td>
-              <td rowspan="2">25zł/kg</td>
+              <td rowspan="2">
+                <abbr title="How many zlotys for 1 kg">25zł/kg</abbr>
+              </td>
             </tr>
             <tr>
               <td>Fried</td>
@@ -99,36 +102,58 @@
             <tr>
               <td colspan="3">Surówka 2 zł</td>
             </tr>
+            <tr>
+              <td colspan="3">1 kilogram is 25 pierogies on average</td>
+            </tr>
           </tbody>
         </table>
       </section>
       <article>
         <h2>Order our pierogies:</h2>
-        <fieldset>
-          <legend>Make order</legend>
-          <label for="flavour">Flavour</label>
-          <input
-            list="color-list"
-            type="text"
-            name="flavour"
-            id="flavour"
-            placeholder="Choose your flavour"
-          />
-          <datalist id="color-list">
-            <option value="Ruskie"></option>
-            <option value="Z mięsem"></option>
-            <option value="Z kapustą"></option>
-            <option value="Z kapustą i z grzybami"></option>
-            <option value="Z jagodami"></option>
-            <option value="Z serem"></option>
-          </datalist>
-          <hr />
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Make order</legend>
+            <label for="flavour">Flavour</label>
+            <input
+              list="color-list"
+              type="text"
+              name="flavour"
+              id="flavour"
+              placeholder="Choose your flavour"
+            />
+            <datalist id="color-list">
+              <option value="Ruskie"></option>
+              <option value="Z mięsem"></option>
+              <option value="Z kapustą"></option>
+              <option value="Z kapustą i z grzybami"></option>
+              <option value="Z jagodami"></option>
+              <option value="Z serem"></option>
+            </datalist>
+            <hr />
             <label for="quantity">Set quantity (minimum 5)</label>
-          <input type="number" min="5" max="" placeholder="How many to buy?"/>
-        </fieldset>
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              min="5"
+              max=""
+              placeholder="How many to buy?"
+            />
+            <br />
+            <br />
+            <button
+              type="submit"
+              formaction="https://httpbin.org/get"
+              formmethod="get"
+            >
+              Make order
+            </button>
+            <button type="reset">Reset</button>
+          </fieldset>
+        </form>
       </article>
       <br />
-      <a href="/">Back to top</a>
+      <a href="#top">Back to top</a>
     </main>
     <hr />
     <footer>
