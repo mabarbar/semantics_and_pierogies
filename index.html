@@ -102,6 +102,32 @@
           </tbody>
         </table>
       </section>
+      <article>
+        <h2>Order our pierogies:</h2>
+        <fieldset>
+          <legend>Make order</legend>
+          <label for="flavour">Flavour</label>
+          <input
+            list="color-list"
+            type="text"
+            name="flavour"
+            id="flavour"
+            placeholder="Choose your flavour"
+          />
+          <datalist id="color-list">
+            <option value="Ruskie"></option>
+            <option value="Z mięsem"></option>
+            <option value="Z kapustą"></option>
+            <option value="Z kapustą i z grzybami"></option>
+            <option value="Z jagodami"></option>
+            <option value="Z serem"></option>
+          </datalist>
+          <hr />
+            <label for="quantity">Set quantity (minimum 5)</label>
+          <input type="number" min="5" max="" placeholder="How many to buy?"/>
+        </fieldset>
+      </article>
+      <br />
       <a href="/">Back to top</a>
     </main>
     <hr />
